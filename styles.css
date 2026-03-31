@@ -169,7 +169,7 @@ nav {
     flex: 1;
     background: var(--teal-dark);
     color: white;
-    padding: 2px 2px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
