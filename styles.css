@@ -119,6 +119,10 @@ nav {
   position: relative;
   text-align: center;
   color: white;
+  display: block;
+
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /* Bottom left text */
@@ -152,21 +156,22 @@ nav {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  -webkit-text-stroke: #222 3px;
-   font-family: var(--candy);
+   font-family: var(--body);
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centered2 {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
-  -webkit-text-stroke: #222 3px;
 }
 
 /* Cards Section */
