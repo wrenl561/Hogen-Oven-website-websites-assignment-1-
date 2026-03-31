@@ -170,7 +170,7 @@ nav {
     flex: 1;
     background: var(--teal-dark);
     color: white;
-    padding: 2rem 2rem;
+    padding: 2px 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,7 +221,6 @@ nav {
     border-radius: 30px;
     text-decoration: none;
     box-shadow: 0 4px 16px rgba(224,123,154,0.35);
-    transition: 0.3s ease;
 }
 
 .venue-cta a:hover {
