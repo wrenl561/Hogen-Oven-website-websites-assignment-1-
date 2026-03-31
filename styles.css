@@ -12,7 +12,7 @@
   --warm-white: #fff8f0;
   --text: #3a2a2a;
   --text-light: #7a5a5a;
-  --candy: 'Pacifico', cursive;
+  --candy: 'Pacifico';
   --body: 'Nunito', sans-serif;
 }
 
@@ -178,12 +178,12 @@ nav {
 }
 
 .venue-text h2 {
-    font-family: var(--candy);
+    font-family: var(--body);
     font-size: 1.8rem;
     color: white;
     margin: 0;
+    font-weight: 800;
 }
-
 .venue-text p {
     font-family: var(--body);
     font-size: 0.95rem;
