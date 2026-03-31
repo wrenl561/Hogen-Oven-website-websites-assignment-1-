@@ -126,7 +126,6 @@ nav {
 
 .venue-row {
     display: flex;
-    gap: 20px;
     background: var(--cream);
     border-radius: 16px;
     overflow: hidden;
