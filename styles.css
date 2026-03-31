@@ -136,7 +136,7 @@ nav {
 .venue-img {
     flex: 1;
     min-height: 300px;
-    background: var(--teal-light);
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
