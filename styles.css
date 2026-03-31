@@ -166,7 +166,6 @@ nav {
     min-height: 300px;
 }
 
-/* Text half */
 .venue-text {
     flex: 1;
     background: var(--teal-dark);
