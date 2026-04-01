@@ -185,45 +185,47 @@ nav {
 
 .card {
   flex: 1;
-  max-width: 100%;
-  height: auto;
-}
-
-.cardpasty {
-  width: 100%;
-  max-width: 180px;
-  display: block;
-  margin: 0 auto;
+  background: var(--teal);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
 
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 1px;
+  display: block;
 }
 
 .card h2 {
   font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 800;
+  color: white;
+  margin: 1rem 1rem 0.5rem;
 }
 
 .card p {
   font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 12px;
+  color: white;
+  margin: 0 1rem 1rem;
+  line-height: 1.6;
 }
 
 .card a {
-  font-size: 0.9rem;
-  color: #008080;
+  display: inline-block;
+  background: var(--pink-dark);
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 30px;
   text-decoration: none;
+  margin: 0 1rem 1rem;
 }
 
 .card a:hover {
-  text-decoration: underline;
+  background: var(--pink);
 }
 
 /* Footer */
