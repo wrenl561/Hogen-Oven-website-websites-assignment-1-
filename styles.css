@@ -193,7 +193,7 @@ nav {
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 380px;
   object-fit: contain;
   background-color: var(--teal);
   display: block;
