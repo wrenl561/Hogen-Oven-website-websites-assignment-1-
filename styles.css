@@ -104,6 +104,7 @@ nav {
   color: var(--pink-dark) !important;
 }
 
+/* ─── INDEX PAGE ─── */
 .para1 {
 
   background-color: var(--cream); 
@@ -193,6 +194,7 @@ nav {
   max-width: 180px;
   display: block;
   margin: 0 auto;
+  background-color: #e07b9a;
 }
 
 .card img {
