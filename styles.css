@@ -227,11 +227,12 @@ nav {
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: var(--pink-dark);
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  border-radius: 0.5rem;
 }
 
 /* ─── VENUE PAGE ─── */
@@ -287,9 +288,9 @@ footer {
 
 .venue-text {
     flex: 1;
-    background: var(--teal-dark);
+    background: var(--teal);
     color: white;
-    padding: 20px 20px;
+    padding: 1.2rem 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -326,7 +327,6 @@ footer {
 .venue-cta {
     text-align: center;
     margin: 10px 0 20px;
-    color: #e07b9a;
 }
 
 .venue-cta a {
@@ -338,16 +338,9 @@ footer {
     font-size: 1rem;
     padding: 0.9rem 3.5rem;
     border-radius: 30px;
-    text-decoration: none;
     box-shadow: 0 4px 16px rgba(224,123,154,0.35);
 }
 
 .venue-cta a:hover {
     background: var(--pink);
-    transform: translateY(-2px);
-}
-
-
-.venue-img {
-    min-height: 200px;
 }
