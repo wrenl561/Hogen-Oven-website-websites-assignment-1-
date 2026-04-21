@@ -175,6 +175,17 @@ nav {
   font-size: 20px;
 }
 
+.pink-box {
+  background-color: var(--pink);
+  color: var(--pink);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 /* Cards Section */
 .cards {
   display: flex;
