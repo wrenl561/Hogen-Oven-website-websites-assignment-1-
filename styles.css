@@ -231,3 +231,8 @@ nav {
 .venue-img {
     min-height: 200px;
 }
+
+/* ─── VENUE BOOKING PAGE ─── */
+.error {
+  border: #f00;
+}
