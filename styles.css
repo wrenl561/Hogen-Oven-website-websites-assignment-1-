@@ -235,4 +235,5 @@ nav {
 /* ─── VENUE BOOKING PAGE ─── */
 .error {
   border: #f00;
+  border-style: solid;
 }

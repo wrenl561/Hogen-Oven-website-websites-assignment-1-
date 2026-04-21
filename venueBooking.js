@@ -5,18 +5,18 @@ function validateForm() {
     var details = document.getElementById('details');
 
     if (name.value == "") {
-        $(#name).addClass("error");
-        alert("name is empty");
+        $("#name").addClass("error");
+        $("#name").after("Some text after");
     }
     else {
-        $(#name).removeClass("error");
+        $("#name").removeClass("error");
     };
     if (email.value == "") {
-        $(#email).addClass("error");
+        $("#email").addClass("error");
         alert("email is empty");
     }
     else {
-        $(#email).removeClass("error");
+        $("#email").removeClass("error");
     };
     if (date.value == "") {
         $(#date).addClass("error");
@@ -36,7 +36,8 @@ function validateForm() {
 
 function init() {
     //document.getElementById('booking').onsubmit = validateForm;
-    $(#name).addClass("error");
+    alert("test")
+    $("#name").addClass("error");
     alert("test");
 }
 
