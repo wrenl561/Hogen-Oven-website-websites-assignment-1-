@@ -499,6 +499,9 @@ footer {
   background: var(--pink);
   text-align: center;
   padding: 50px 2rem 40px;
+  border-radius: 0 0 12px 12px; 
+  overflow: hidden;
+
 }
 
 .van-hero img {
