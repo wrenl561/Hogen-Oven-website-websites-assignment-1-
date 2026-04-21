@@ -351,7 +351,7 @@ footer {
 }
 
   .page-hero {
-    background: #c97a85;
+    background: var(--pink);
     padding: 40px 32px;
     text-align: center;
     border-radius: 0 0 12px 12px;
