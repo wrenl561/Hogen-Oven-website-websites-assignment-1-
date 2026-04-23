@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogen Oven Menu and FAQ</title>
+</head>
+
+<style>
+    /* ==== GENERAL STYLES ===== */
+    body {
+        font-family: var(--body);
+        margin: 0;
+        background-color: var(--warm-white);
+        color: var(--text);
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-family: var(--body);
+    }
+
+    /* ==== COLOUR THEME ===== */
+    :root {
+        --teal: #3dbfbf;
+        --teal-dark: #2a9d9d;
+        --teal-light: #a8e6e6;
+        --pink: #f4a7b9;
+        --pink-dark: #e07b9a;
+        --pink-light: #fce4ec;
+        --cream: #fffdf9;
+        --warm-white: #fff8f0;
+        --text: #3a2a2a;
+        --text-light: #7a5a5a;
+        --candy: 'Pacifico';
+        --body: 'Nunito', sans-serif;
+    }
+
+    /* ==== HEADER ==== */
+    header {
+        background: var(--teal);
+        padding: 20px;
+        color: white;
+        border-radius: 0.5rem;
+    }
+
+    /* ==== MENU SECTION ==== */
+    .menu {
+        padding: 30px;
+        background: var(--cream);
+        border-radius: 16px;
+    }
+
+    .menu-categories button {
+        background: var(--pink);
+        border: none;
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 30px;
+        font-weight: 700;
+        font-family: var(--body);
+        color: white;
+        transition: 0.3s ease;
+    }
+
+    .menu-categories button:hover {
+        background: var(--teal);
+        color: white;
+    }
+
+    .menu-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .item {
+        background: var(--warm-white);
+        border: 2px solid var(--pink-light);
+        border-radius: 16px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .item img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    /* ==== FAQ SECTION ==== */
+    .faq {
+        padding: 30px;
+        background: var(--pink-light);
+        border-radius: 16px;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px, 15px, rgba(0,0,0,0.08);
+    }
+
+    .faq-question {
+        background: var(--teal);
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        font-weight: 700;
+        font-family: var(--body);
+    }
+
+    .faq-question {
+        background: var(--teal-dark)
+    }
+
+    .faq-answer {
+        background: var(--pink);
+        padding: 15px;
+        display: none;
+        color: var(--teal-light);
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Hogen Oven</h1>
+        <p style="text-align: center;">Delicious treats baked with love</p>
+    </header>
+    <!-- ==== MENU SECTION ==== -->
+     <section class="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu-categories">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('cakes')">Cakes</button>
+            <button onclick="filterMenu('pasteries')">Pasteries</button>
+            <button onclick="filterMenu('seasonal')">Seasonal</button>
+        </div>
+
+        <div class="menu-items">
+            <div class="item cakes">
+                <img src="Chocolate_cake.png" alt="Cake">
+                <h3>Chocolate Cake</h3>
+                <p>£4.50</p>
+            </div>
+
+            <div class="item cakes">
+                <img src="Strawberry_cupcakes.webp" alt="Cupcake">
+                <h3>Strawberry Cupcake</h3>
+                <p>£2.50</p>
+            </div>
+
+            <div class="item pasteries">
+                <img src="Butter_croissant.webp" alt="Croissant">
+                <h3>Butter Croissant</h3>
+                <p>£3.00</p>
+            </div>
+            
+            <div class="item pasteries">
+                <img src="Rainbow_Sprinkle_donut.webp" alt="Donut">
+                <h3>Rainbow Sprinkle Donut</h3>
+                <p>£2.50</p>
+            </div>
+
+            <div class="item pasteries">
+                <img src="French_macrons.webp" alt="Macrons">
+                <h3>French Macrons (Box)</h3>
+                <p>£6.00</p>
+            </div>
+
+            <div class="item pasteries">
+                <img src="Cornish_pasty.jpg" alt="Cornish Pasty">
+                <h3>Cornish Pasty</h3>
+                <p>£3.90</p>
+            </div>
+
+            <div class="item seasonal">
+                <img src="Festival_Sugar_cookie.webp" alt="Festival Cookies">
+                <h3>Festival Sugar Cookies</h3>
+                <p>£3.50</p>
+            </div>
+
+            <div class="item seasonal">
+                <img src="Caramel_Swirl_brownie.webp" alt="Limited Brownie">
+                <h3>Caramel Swirl Brownie</h3>
+                <p>£3.80</p>
+            </div>
+
+        </div>
+     </section>
+
+    <!-- ==== FAQ SECTION ==== -->
+     <section class="faq">
+        <h2>FAQs</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you offer custom cakes?</div>
+            <div class="faq-question">Yes! We create custom cakes for birthdays, weddings and special events.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you cater for weddings?</div>
+            <div class="faq-question">Absolutely! We provide dessert catering for weddings and festivals.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I order online?</div>
+            <div class="faq-question">Yes, our online ordering system is coming soon!</div>
+        </div>
+     </section>
+
+     <script>
+        /* ==== MENU FILTER ==== */
+        function filterMenu(category) {
+            let items = document.querySelectorAll('.item')
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = item.classList.contains(category) ? 'block' : 'none';
+                }
+            });
+        }
+
+        /* ==== FAQ TOGGLE ==== */
+        let questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(q => {
+            q.addEventListener('click', () => {
+                let answer = q.nextElementSibling;
+
+                answer.style.display = 
+                    answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+     </script>
+</body>
+</head>
+</html>
