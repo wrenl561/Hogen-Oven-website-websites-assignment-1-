@@ -157,7 +157,7 @@ nav {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
@@ -169,7 +169,7 @@ nav {
 
 .centered2 {
   position: absolute;
-  top: 55%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
@@ -186,9 +186,10 @@ nav {
   text-align: center;
   color: white;
   font-size: 1.2rem;
-    width: 100%;           /* add this - controls the box width */
+  width: 50%;           /* add this - controls the box width */
   white-space: nowrap;  /* add this - stops text wrapping */
   z-index: 10;
+  padding: 40px 40px;
 }
 
 /* Cards Section */
