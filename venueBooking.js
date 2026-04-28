@@ -19,14 +19,14 @@ function validateForm() {
         $("#email").removeClass("error");
     };
     if (date.value == "") {
-        $(#date).addClass("error");
+        $("#date").addClass("error");
         alert("date is empty");
     }
     else {
-        $(#date).removeClass("error");
+        $("#date").removeClass("error");
     };
     if (details.value == "") {
-         $(#details).addClass("error");
+         $("#details").addClass("error");
         alert("details is empty");
     }
     else {
@@ -36,7 +36,7 @@ function validateForm() {
 
 function init() {
     //document.getElementById('booking').onsubmit = validateForm;
-    alert("test")
+    alert("test");
     $("#name").addClass("error");
     alert("test");
 }
