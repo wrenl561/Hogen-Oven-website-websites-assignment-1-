@@ -238,7 +238,7 @@ p {
   border-style: solid;
 }
 
-input {
+input, textarea {
   border: 2px var(--teal);
   border-radius: 8px;
   padding: 10px;
