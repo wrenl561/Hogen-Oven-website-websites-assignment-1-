@@ -31,7 +31,7 @@
     </div>
     <h1>Book a venue</h1>
     <p>Fill in the form below and we will contact you soon!</p>
-    <form id="booking" novalidate>
+    <form id="booking" onsubmit="event.preventDefault()">
         <div>
             <input type="text" id="name" name="name" placeholder="Name">
         </div>

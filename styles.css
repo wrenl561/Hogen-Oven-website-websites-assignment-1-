@@ -245,7 +245,3 @@ input, textarea {
   width: 20%;
   background-color: var(--cream);
 }
-
-input .large {
-  height: 20%;
-}
