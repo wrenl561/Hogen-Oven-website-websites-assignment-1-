@@ -399,14 +399,14 @@ menu {
     gap: 1rem;
 }
 
-.venue-text h2 {
+h2 {
     font-family: var(--body);
     font-size: 1.8rem;
     color: white;
     margin: 0;
     font-weight: 800;
 }
-.venue-text p {
+p {
     font-family: var(--body);
     font-size: 0.95rem;
     line-height: 1.7;
