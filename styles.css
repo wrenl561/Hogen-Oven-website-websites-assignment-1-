@@ -257,7 +257,7 @@ footer {
 }
 
 /* ==== MENU SECTION ==== */
-menu {
+.menu {
   padding: 30px;
   background: var(--cream);
   border-radius: 16px;
