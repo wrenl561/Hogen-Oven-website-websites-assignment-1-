@@ -147,6 +147,37 @@
             });
         }
 
+        /* ==== ORDER SYSTEM ==== */
+        function placeOrder(item) {
+            
+            let prices = {
+                'Chocolate Cake': 3,
+                'Strawberry Cupcake': 2.50,
+                'Butter Croissant': 2,
+                'Rainbow Sprinkle Donut': 1,
+                'French Macrons (Box)': 3,
+                'Cornish Pasty': 4,
+                'Festival Sugar Cookies': 3,
+                'Caramel Swirl Brownie': 4
+            };
+
+            let total = 0;
+            let summary = "You ordered:<br>";
+
+            for (let item in prices) {
+                let quantity = parseInt(document.getElementById(item).value);
+                if (quantity > 0) {
+                    let cost = quantity * prices[item];
+
+                    total += cost;
+
+                    summary += quantity + " x " + item + " = £" + cost.toFixed(2) + "<br>";
+                }
+            }
+        }
+
+
+
         /* ==== FAQ TOGGLE ==== */
         let questions = document.querySelectorAll('.faq-question');
 
