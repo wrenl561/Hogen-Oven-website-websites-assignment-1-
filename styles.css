@@ -104,6 +104,11 @@ nav {
   color: var(--pink-dark) !important;
 }
 
+.text-on-white {
+  color: var(--text)
+}
+
+
 /* ─── INDEX PAGE ─── */
 .para1 {
 
