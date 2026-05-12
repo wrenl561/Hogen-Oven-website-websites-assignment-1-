@@ -257,7 +257,7 @@ footer {
 }
 
 /* ==== MENU SECTION ==== */
-menu {
+.menu {
   padding: 30px;
   background: var(--cream);
   border-radius: 16px;
@@ -399,14 +399,14 @@ menu {
     gap: 1rem;
 }
 
-.venue-text h2 {
+h2 {
     font-family: var(--body);
     font-size: 1.8rem;
     color: white;
     margin: 0;
     font-weight: 800;
 }
-.venue-text p {
+p {
     font-family: var(--body);
     font-size: 0.95rem;
     line-height: 1.7;
@@ -720,4 +720,21 @@ menu {
   flex-shrink: 0;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
