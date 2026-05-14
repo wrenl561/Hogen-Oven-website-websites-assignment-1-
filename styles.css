@@ -36,7 +36,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(61,191,191,0.3);
   border-radius: 12px 12px 0 0;
 }
 
@@ -82,7 +81,6 @@ nav {
   position: absolute;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
   min-width: 160px;
   overflow: hidden;
   z-index: 200;
