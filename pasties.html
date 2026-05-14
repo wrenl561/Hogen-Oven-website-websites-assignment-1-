@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogen Oven Menu and FAQ</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="navigation logo">
+    </a>
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="menu.html">Menu</a>
+        <div class="dropdown-menu">
+          <a href="menu.html">All Items</a>
+          <a href="#">Pasties</a>
+          <a href="#">Cakes &amp; Bakes</a>
+          <a href="#">Seasonal</a>
+        </div>
+      </div>
+      <a href="allergies.html">Allergies</a>
+      <a href="pastyVan.html" class="active">Pasty Van</a>
+      <a href="venue.html">Weddings &amp; Venue</a>
+      <a href="locations.html">Locations</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </nav>
+
+</nav>
+    <!-- ==== MENU SECTION ==== -->
+     <section class="menu">
+        <h2 class="text-on-white">Our Menu</h2>
+
+        <br>
+
+        <div class="menu-items">
+            <div class="item menu-image cakes">
+                <img src="Chocolate_cake.png" alt="Cake">
+                <h3>Traditional Cornish Pasty</h3>
+                <h4>£4</h4>
+            </div>
+
+            <div class="item menu-image cakes">
+                <img src="Strawberry_cupcakes.webp" alt="Cupcake">
+                <h3>Steak & Ale/Gravy Pasty</h3>
+                <h4>£2.50</h4>
+            </div>
+
+            <div class="item menu-image pasteries">
+                <img src="Butter_croissant.webp" alt="Croissant">
+                <h3>Cheese & Onion Pasty</h3>
+                <h4>£2</h4>
+            </div>
+            
+            <div class="item menu-image pasteries">
+                <img src="Rainbow_Sprinkle_donut.webp" alt="Donut">
+                <h3>Lamb & Mint Pasty</h3>
+                <h4>£1</h4>
+            </div>
+
+            <div class="item menu-image pasteries">
+                <img src="French_macrons.webp" alt="Macrons">
+                <h3>Vegetable/Vegan Pasty</h3>
+                <h4>£3</h4>
+            </div>
+
+            <div class="item menu-image pasteries">
+                <img src="Cornish_pasty.jpg" alt="Cornish Pasty">
+                <h3>Spicy Chicken Pasty</h3>
+                <h4>£4</h4>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Festival_Sugar_cookie.webp" alt="Festival Cookies">
+                <h3>Sweet Pasty</h3>
+                <h4>£3</h4>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Caramel_Swirl_brownie.webp" alt="Limited Brownie">
+                <h3>Mini Pasties</h3>
+                <h4>£4</h4>
+            </div>
+
+        </div>
+     </section>
+
+     <script>
+        /* ==== ORDER SYSTEM ==== */
+        function placeOrder(item) {
+            
+            let prices = {
+                'Chocolate Cake': 3,
+                'Strawberry Cupcake': 2.50,
+                'Butter Croissant': 2,
+                'Rainbow Sprinkle Donut': 1,
+                'French Macrons (Box)': 3,
+                'Cornish Pasty': 4,
+                'Festival Sugar Cookies': 3,
+                'Caramel Swirl Brownie': 4
+            };
+
+            let total = 0;
+            let summary = "You ordered:<br>";
+
+            for (let item in prices) {
+                let quantity = parseInt(document.getElementById(item).value);
+                if (quantity > 0) {
+                    let cost = quantity * prices[item];
+
+                    total += cost;
+
+                    summary += quantity + " x " + item + " = £" + cost.toFixed(2) + "<br>";
+                }
+            }
+
+            summary += "<br><strong>Total: £" + total.toFixed(2) + "</strong>";
+            document.getElementById('order-summary').innerHTML = summary;
+        }
+
+
+
+        /* ==== FAQ TOGGLE ==== */
+        let questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(q => {
+            q.addEventListener('click', () => {
+                let answer = q.nextElementSibling;
+
+                answer.style.display = 
+                    answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+     </script>
+
+    <!-- ORDER BUTTON -->
+    <div class="order-cta">
+        <a href="order.html">Order Here!</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
