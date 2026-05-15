@@ -3,53 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <title>Venue Booking</title>
-</head>
-<body>
-    <div id="nav-bar">
-        <nav>
-    <a class="nav-logo" href="index.html">
-      <img src="logo.png" alt="nav-logo">
-    </a>
-    <div class="nav-links">
-      <div class="dropdown">
-        <a href="menu.html">Menu</a>
-        <div class="dropdown-menu">
-          <a href="menu.html">All Items</a>
-          <a href="#">Pasties</a>
-          <a href="#">Cakes &amp; Bakes</a>
-          <a href="#">Seasonal</a>
-        </div>
-      </div>
-      <a href="allergies.html">Allergies</a>
-      <a href="pastyVan.html">Pasty Van</a>
-      <a href="venue.html" class="active">Weddings &amp; Venue</a>
-    </div>
-  </nav>
 
-    </div>
-    <h2>Book a venue</h2>
-    <p>Fill in the form below and we will contact you soon!</p>
-    <form id="booking" name="bookingForm" onsubmit="event.preventDefault()">
-        <div>
-            <input type="text" id="name" name="customerName" placeholder="Name">
-        </div>
-        <div>
-            <input type="text" id="email" name="email" placeholder="Email">
-        </div>
-        <div>
-            <input type="date" id="date" name="date">
-        </div>
-        <div>
-            <textarea rows="6" id="details" name="details" placeholder="Details"></textarea>
-        </div>
-        <div>
-            <input type="submit" value="Send" id="submit">
-        </div>
-    </form>
-    
+    <title>Venue Booking</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="venueBooking.js"></script>
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+
+        <a class="nav-logo" href="index.html">
+            <img src="logo.png" alt="nav-logo">
+        </a>
+
+        <div class="nav-links">
+
+            <div class="dropdown">
+
+                <a href="menu.html">Menu</a>
+
+                <div class="dropdown-menu">
+                    <a href="menu.html">All Items</a>
+                    <a href="#">Pasties</a>
+                    <a href="#">Cakes &amp; Bakes</a>
+                    <a href="#">Seasonal</a>
+                </div>
+
+            </div>
+
+            <a href="allergies.html">Allergies</a>
+            <a href="pastyVan.html">Pasty Van</a>
+            <a href="venue.html" class="active">Weddings &amp; Venue</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- BOOKING SECTION -->
+    <section class="booking-page">
+
+        <div class="booking-card">
+
+            <h1>🧁 Book a venue 🍩</h1>
+
+            <p>
+                Fill in the form below and we will contact you soon!
+            </p>
+
+            <form 
+                id="booking"
+                name="bookingForm"
+            >
+
+                <!-- NAME -->
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="customerName"
+                        placeholder="Name"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                    >
+
+                </div>
+
+
+                <!-- DATE -->
+                <div class="form-group">
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                    >
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div class="form-group">
+
+                    <textarea
+                        rows="6"
+                        id="details"
+                        name="details"
+                        placeholder="Details"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="submit-wrap">
+
+                    <input
+                        type="submit"
+                        value="Send"
+                        id="submit"
+                    >
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- EXTERNAL JS -->
+<script src="venueBooking.js"></script>
+
 </body>
 </html>
