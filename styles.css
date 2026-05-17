@@ -741,3 +741,84 @@ p {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+/* ─── REVIEWS PAGE ─── */
+
+.review-panel {
+
+    background: var(--cream);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+
+.review-card {
+
+    margin-bottom: 25px;
+}
+
+
+.review-top {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+.review-top img {
+
+    width: 140px;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+.review-content {
+
+    flex: 1;
+}
+
+
+.review-content h2 {
+
+    color: var(--text);
+
+    margin-bottom: 10px;
+}
+
+
+.review-content p {
+
+    color: var(--text-light);
+}
+
+
+.review-name {
+
+    margin-top: 10px;
+
+    font-weight: 700;
+}
+
+
+@media (max-width: 700px) {
+
+    .review-top {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
