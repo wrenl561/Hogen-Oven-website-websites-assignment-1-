@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu of Items</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="nav-logo">
+    </a>
+
+    <div class="nav-links">
+
+      <div class="dropdown">
+        <a href="items.html" class="active">Menu</a>
+
+        <div class="dropdown-menu">
+          <a href="items.html" class="active">All Items</a>
+          <a href="pasties.html">Pasties</a>
+          <a href="cakes.html">Cakes &amp; Bakes</a>
+          <a href="seasonal.html">Seasonal</a>
+        </div>
+      </div>
+
+      <a href="faqs.html">FAQs</a>
+      <a href="allergies.html">Allergies</a>
+      <a href="pastyVan.html">Pasty Van</a>
+      <a href="venue.html" class="active">Weddings &amp; Venue</a>
+      <a href="locations.html">Locations</a>
+      <a href="bakingnews.html">Baking News</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="reviews.html"> Reviews</a>
+
+    </div>
+  </nav>
+
+    <!-- ==== ALL ITEMS SECTION ==== -->
+     <section class="menu">
+        <h2 class="text-on-pink">Our Menu of Items</h2>
+
+        <br>
+
+        <div class="menu-items">
+            <div class="item menu-image pasties">
+                <img src="Cornish_pasty.jpg" alt="Pasty">
+                <h3>Traditional Cornish Pasty</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Traditional Cornish Pasty', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="Steak_Ale.jpg" alt="Pasty">
+                <h3>Steak & Ale/Gravy Pasty</h3>
+                <p class="price">£2.50</p>
+                <button onclick="addToCart('Steak & Ale/Gravy Pasty', 2.50)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="Cheese-Onion-Pasty.jpg" alt="Pasty">
+                <h3>Cheese & Onion Pasty</h3>
+                <p class="price">£2</p>
+                <button onclick="addToCart('Cheese & Onion Pasty', 2)">
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="item menu-image pasties">
+                <img src="Lamb-Mint-Pasty.jpg" alt="Pasty">
+                <h3>Lamb & Mint Pasty</h3>
+                <p class="price">£1</p>
+                <button onclick="addToCart('Lamb & Mint Pasty', 1)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="Vegetable-Vegan-Pasty.jpg" alt="Pasty">
+                <h3>Vegetable/Vegan Pasty</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Vegetable/Vegan Pasty', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="Spicy-Chicken-Pasty.jpg" alt="Pasty">
+                <h3>Spicy Chicken Pasty</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Spicy Chicken Pasty', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="Sweet-Pasty.jpg" alt="Pasty">
+                <h3>Sweet Pasty</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Sweet Pasty', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image pasties">
+                <img src="mini-pasties.jpg" alt="Pasty">
+                <h3>Mini Pasties</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Mini Pasties', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="white-loaf.jpg" alt="Baked Goods">
+                <h3>White Loaf</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('White Loaf', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="French-baguette.jpg" alt="Baked Goods">
+                <h3>French Baguette</h3>
+                <p class="price">£2.50</p>
+                <button onclick="addToCart('French Baguette', 2.50)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Plain-croissant.jpg" alt="Baked Goods">
+                <h3>Plain Croissant</h3>
+                <p class="price">£2</p>
+                <button onclick="addToCart('Plain Croissant', 2)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Cinnamon-rolls.jpg" alt="Baked Goods">
+                <h3>Cinnamon Roll</h3>
+                <p class="price">£1</p>
+                <button onclick="addToCart('Cinnamon Roll', 1)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Strawberry_cupcakes.webp" alt="Baked Goods">
+                <h3>Strawberry Cupcake</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Strawberry Cupcake', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Butter_croissant.webp" alt="Baked Goods">
+                <h3>Butter Croissant</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Butter Croissant', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Rainbow_Sprinkle_donut.webp" alt="Baked Goods">
+                <h3>Rainbow Sprinkle Donut</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Rainbow Sprinkle Donut', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image baked goods">
+                <img src="Sourdough-loaf.jpg" alt="Baked Goods">
+                <h3>Sourdough Loaf</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Sourdough Loaf', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Gingerbread-cookies.jpg" alt="Seasonal">
+                <h3>Gingerbread Cookie</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Gingerbread Cookie', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Christmas-cake.jpg" alt="Seasonal">
+                <h3>Christmas Cake</h3>
+                <p class="price">£10</p>
+                <button onclick="addToCart('Christmas Cake', 10)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Yule-log.jpg" alt="Seasonal">
+                <h3>Yule Log</h3>
+                <p class="price">£2</p>
+                <button onclick="addToCart('Yule Log', 2)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Wedding-cake.jpg" alt="Seasonal">
+                <h3>Wedding Cake</h3>
+                <p class="price">£1</p>
+                <button onclick="addToCart('Wedding Cake', 1)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Spiced-bun.jpg" alt="Seasonal">
+                <h3>Spiced Bun</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Spiced Bun', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Holiday-cheesecake.jpg" alt="Seasonal">
+                <h3>Holiday Cheesecake</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Holiday Cheesecake', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Festival_Sugar_cookie.webp" alt="Seasonal">
+                <h3>Festival Sugar Cookie</h3>
+                <p class="price">£3</p>
+                <button onclick="addToCart('Festival Sugar Cookie', 3)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="item menu-image seasonal">
+                <img src="Caramel_Swirl_brownie.webp" alt="Seasonal">
+                <h3>Caramel Swirl Brownie</h3>
+                <p class="price">£4</p>
+                <button onclick="addToCart('Caramel Swirl Brownie', 4)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+     </section>
+
+     <!-- SHOPPING CART -->
+     <aside class="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <div id="cart-total">
+            <strong>Total:</strong>
+            <span>£</span id="cart-total">0.00</span></span>
+        </div>
+        <a href="checkout.html" class="checkout-btn">
+            Proceed to Checkout
+        </a>
+     </aside>
+
+     <script>
+        let cart = [];
+        let total = 0;
+        
+        function addToCart(itemName, itemPrice) {
+            cart.push({
+                name: itemName,
+                price: itemPrice
+            });
+
+            total += itemPrice;
+            updateCart();
+        }
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            
+            cartItems.innerHTML = '';
+            
+            cart.forEach(item => {
+                
+                const li = document.createElement('li');
+                
+                li.innerHTML = `
+                   <span>${item.name}</span>
+                   <span>£${item.price.toFixed(2)}</span>
+                `;
+                
+                cartItems.appendChild(li);
+            });
+
+            cartTotal.textContent = total.toFixed(2);
+        }
+     </script>
+
+    <footer>
+        <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

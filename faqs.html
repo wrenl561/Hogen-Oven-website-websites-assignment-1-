@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>FAQs</title>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="nav-logo">
+    </a>
+
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="items.html">Menu</a>
+        <div class="dropdown-menu">
+          <a href="items.html">All Items</a>
+          <a href="pasties.html">Pasties</a>
+          <a href="cakes.html">Cakes &amp; Bakes</a>
+          <a href="seasonal.html">Seasonal</a>
+        </div>
+      </div>
+      <a href="faqs.html" class="active">FAQs</a>
+      <a href="allergies.html">Allergies</a>
+      <a href="pastyVan.html">Pasty Van</a>
+      <a href="venue.html">Weddings &amp; Venue</a>
+      <a href="locations.html">Locations</a>
+      <a href="bakingnews.html">Baking News</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="reviews.html"> Reviews</a>
+    </div>
+  </nav>
+  </nav>
+
+    <!-- ==== FAQ SECTION ==== -->
+     <section class="faq">
+        <h2>FAQs</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you offer custom cakes?</div>
+            <div class="faq-answer">Yes! We create custom cakes for birthdays, weddings and special events.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do you cater for weddings?</div>
+            <div class="faq-answer">Absolutely! We provide dessert catering for weddings and festivals.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I order online?</div>
+            <div class="faq-answer">Yes, our online ordering system is coming soon!</div>
+        </div>
+     </section>
+
+     <footer>
+        <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
+     </footer>
+
+     <script>
+        /* ==== FAQ TOGGLE ==== */
+        let questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(q => {
+            q.addEventListener('click', () => {
+                let answer = q.nextElementSibling;
+
+                answer.style.display = 
+                    answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+     </script>
+</body>
+</html>
