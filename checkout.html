@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="nav-logo">
+    </a>
+
+    <div class="nav-links">
+        <a href="items.html" class="active">Menu</a>
+    </div>
+  </nav>
+
+    <!-- CHECKOUT SECTION -->
+    <section class="checkout-container">
+
+        <div class="checkout-form">
+            <h1>Checkout</h1>
+
+            <form id="payment-form">
+
+                <h2>Customer Details</h2>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" rows="4" required></textarea>
+
+                <h2>Payment Details</h2>
+
+                <label for="cardname">Cardholder Name</label>
+                <input type="text" id="cardname" required>
+
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" maxlength="16" required>
+
+                <div class="payment-row">
+
+                    <div>
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="password" id="cvv" maxlength="3" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="pay-btn">
+                    Complete Payment
+                </button>
+
+            </form>
+        </div>
+        
+        <!-- ORDER SUMMARY -->
+        <aside class="order-summary">
+            <h2>Order Summary</h2>
+
+            <ul id="summary-items">
+                <li>
+                    <span>Traditional Cornish Pasty</span>
+                    <span>£4.00</span>
+                </li>
+
+                <li>
+                    <span>Strawberry Cupcake</span>
+                    <span>£3.00</span>
+                </li>
+            </ul>
+
+            <div class="summary-total">
+                <strong>Total</strong>
+                <strong>£7.00</strong>
+            </div>
+        </aside>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
