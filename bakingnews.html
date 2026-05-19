@@ -374,36 +374,7 @@
     <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
   </footer>
 
-  <script>
-    function filterNews(type, btn) {
-      // update button active state
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
 
-      const cards = document.querySelectorAll('#news-grid .news-card');
-      const upcomingSection = document.querySelectorAll('[data-category="event"]');
-      const newsTitle = document.querySelector('[data-category="news"]');
-
-      if (type === 'all') {
-        cards.forEach(c => c.style.display = '');
-        upcomingSection.forEach(el => el.style.display = '');
-        newsTitle.style.display = '';
-      } else if (type === 'event') {
-        cards.forEach(c => {
-          c.style.display = c.dataset.type === 'event' ? '' : 'none';
-        });
-        upcomingSection.forEach(el => el.style.display = '');
-        newsTitle.style.display = '';
-      } else {
-        // hide event section
-        upcomingSection.forEach(el => el.style.display = 'none');
-        cards.forEach(c => {
-          c.style.display = c.dataset.type === type ? '' : 'none';
-        });
-        newsTitle.style.display = '';
-      }
-    }
-  </script>
 
 </body>
 </html>
