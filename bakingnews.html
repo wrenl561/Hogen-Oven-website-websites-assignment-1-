@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Baking News – Hogen Oven</title>
+    <style>
+        /* ─── BAKING NEWS PAGE ─── */
+        .news-hero {
+            background: var(--teal);
+            text-align: center;
+            padding: 50px 2rem 40px;
+            border-radius: 0 0 12px 12px;
+        }
+        .news-hero h1 {
+            font-family: var(--body);
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 0 0.5rem;
+        }
+        .news-hero p {
+            font-size: 1.05rem;
+            color: white;
+            opacity: 0.92;
+            margin: 0;
+        }
+
+        /* ─── FILTER TABS ─── */
+        .news-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 28px 1.5rem 0;
+        }
+        .filter-btn {
+            background: white;
+            color: var(--teal-dark);
+            border: 2px solid var(--teal);
+            border-radius: 30px;
+            padding: 0.4rem 1.1rem;
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--teal);
+            color: white;
+            border-color: var(--teal);
+        }
+        .filter-btn.pink-filter {
+            border-color: var(--pink-dark);
+            color: var(--pink-dark);
+        }
+        .filter-btn.pink-filter:hover,
+        .filter-btn.pink-filter.active {
+            background: var(--pink-dark);
+            color: white;
+            border-color: var(--pink-dark);
+        }
+
+        /* ─── NEWS GRID ─── */
+        .news-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 28px 1.5rem 50px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+        }
+
+        .news-card-img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            background: var(--teal-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .news-card-body {
+            padding: 1rem 1.2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .news-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            margin-bottom: 0.6rem;
+            width: fit-content;
+        }
+        .tag-new-item { background: var(--pink-light); color: var(--pink-dark); }
+        .tag-event    { background: #e8f5f5;           color: var(--teal-dark);  }
+        .tag-seasonal { background: #fff3cd;           color: #8a6100;           }
+
+        .news-card-body h3 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text);
+            margin: 0 0 0.4rem;
+        }
+        .news-card-body p {
+            font-size: 0.87rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0 0 1rem;
+            flex: 1;
+        }
+
+        .news-meta {
+            font-size: 0.78rem;
+            color: #aaa;
+            font-weight: 600;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 0.7rem;
+            margin-top: auto;
+        }
+
+        /* ─── FEATURED / WIDE CARD ─── */
+        .news-card.featured {
+            grid-column: 1 / -1;
+            flex-direction: row;
+        }
+        .news-card.featured .news-card-img {
+            width: 320px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 0;
+        }
+        .news-card.featured .news-card-body h3 {
+            font-size: 1.4rem;
+        }
+        .news-card.featured .news-card-body p {
+            font-size: 0.93rem;
+        }
+
+        /* ─── EVENTS SIDEBAR ROW ─── */
+        .news-section-title {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin: 30px 0 14px;
+        }
+
+        .upcoming-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+        .upcoming-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.15s ease;
+        }
+        .upcoming-card:hover { transform: translateX(4px); }
+
+        .event-date {
+            background: var(--pink-dark);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 0.4rem 0.8rem;
+            min-width: 52px;
+            flex-shrink: 0;
+        }
+        .event-date .day   { font-size: 1.4rem; font-weight: 800; line-height: 1; }
+        .event-date .month { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+
+        .event-info { flex: 1; }
+        .event-info h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text);
+            margin: 0 0 0.2rem;
+        }
+        .event-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .event-badge {
+            background: var(--teal);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* hidden cards for filter */
+        .news-card[data-hidden="true"] { display: none; }
+
+        @media (max-width: 640px) {
+            .news-card.featured { flex-direction: column; }
+            .news-card.featured .news-card-img { width: 100%; height: 175px; }
+            .news-hero h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="nav-logo">
+    </a>
+    <div class="nav-links">
+      <div class="dropdown">
+        <a href="menu.html">Menu</a>
+        <div class="dropdown-menu">
+          <a href="menu.html">All Items</a>
+          <a href="#">Pasties</a>
+          <a href="#">Cakes &amp; Bakes</a>
+          <a href="#">Seasonal</a>
+        </div>
+      </div>
+
+      <a href="faqs.html">FAQs</a>
+      <a href="allergies.html">Allergies</a>
+      <a href="pastyVan.html">Pasty Van</a>
+      <a href="venue.html">Weddings &amp; Venue</a>
+      <a href="locations.html">Locations</a>
+      <a href="bakingnews.html" class="active">Baking News</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="reviews.html"> Reviews</a>
+
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="news-hero">
+    <h1>🗞️ Baking News</h1>
+    <p>New items, seasonal specials, events &amp; everything fresh from the oven.</p>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="news-filters">
+    <button class="filter-btn active" onclick="filterNews('all', this)">All</button>
+    <button class="filter-btn pink-filter" onclick="filterNews('new-item', this)">✨ New Items</button>
+    <button class="filter-btn" onclick="filterNews('event', this)">📅 Events</button>
+    <button class="filter-btn" onclick="filterNews('seasonal', this)">🌸 Seasonal</button>
+  </div>
+
+  <div class="news-wrap">
+
+
+    <!-- NEWS CARDS -->
+    <div class="news-section-title" data-category="news">📰 Latest News</div>
+    <div class="news-grid" id="news-grid">
+
+      <!-- FEATURED -->
+      <div class="news-card featured" data-type="new-item">
+        <img src="creamandstrawberrypasty.PNG" alt="Strawberry & Cream Pasty" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-tag tag-new-item">✨ New Item</span>
+          <h3>Introducing: Strawberry &amp; Cream Pasty</h3>
+          <p>We've taken the classic pasty shape and filled it with sweet, locally-sourced strawberries and whipped cream — the perfect summer treat. Available now in store while stocks last. Trust us, you won't want to miss this one.</p>
+          <div class="news-meta">📅 Released 9 May 2026 &nbsp;·&nbsp; Summer Special</div>
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div class="news-card" data-type="seasonal">
+        <img src="midnightsun.jpg" alt="Midnight Sun" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-tag tag-seasonal">🌸 Seasonal</span>
+          <h3>Summer Menu Is Live!</h3>
+          <p>Our full summer menu is now available — lighter bakes, fruit-forward flavours, and a brand new lemon drizzle loaf joining the lineup.</p>
+          <div class="news-meta">📅 1 June 2026</div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="news-card" data-type="new-item">
+        <img src="chocolatecookie.PNG" alt="Triple Chocolate Chunk Cookie" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-tag tag-new-item">✨ New Item</span>
+          <h3>Triple Chocolate Chunk Cookie</h3>
+          <p>Three kinds of chocolate, one very indulgent cookie. Chunky, chewy, and baked fresh every morning. Available individually or in a box of six.</p>
+          <div class="news-meta">📅 22 April 2026</div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="news-card" data-type="event">
+        <img src="foodfestival.PNG" alt="Falmouth Food Festival" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-tag tag-event">📅 Event</span>
+          <h3>We Were at the Falmouth Food Festival!</h3>
+          <p>Last weekend our team brought the van down to Falmouth Food Festival. Huge thanks to everyone who stopped by — we sold out by 1pm! Watch this space for our next festival appearance.</p>
+          <div class="news-meta">📅 3 May 2026</div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="news-card" data-type="new-item">
+        <img src="maplepecan.PNG" alt="Maple & Pecan Danish" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-tag tag-new-item">✨ New Item</span>
+          <h3>Maple &amp; Pecan Danish</h3>
+          <p>Flaky laminated pastry, sweet maple glaze, and toasted pecans. A new breakfast favourite — grab one with your morning coffee.</p>
+          <div class="news-meta">📅 14 April 2026</div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="news-card" data-type="seasonal">
+        <div class="news-card-img" style="background: #d4edda;">🌿</div>
+        <div class="news-card-body">
+          <span class="news-tag tag-seasonal">🌸 Seasonal</span>
+          <h3>Elderflower &amp; Lemon Drizzle Loaf</h3>
+          <p>Made with elderflower cordial from a local producer and fresh lemon zest — this one tastes like a proper Cornish summer afternoon.</p>
+          <div class="news-meta">📅 1 June 2026 · Limited Run</div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="news-card" data-type="event">
+        <div class="news-card-img" style="background: #e8f5f5;">💍</div>
+        <div class="news-card-body">
+          <span class="news-tag tag-event">📅 Event</span>
+          <h3>Wedding Catering Now Bookable for 2027</h3>
+          <p>Planning ahead? We're now taking wedding catering and venue enquiries for 2027. Get in touch early — our summer dates fill up fast!</p>
+          <div class="news-meta">📅 20 March 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterNews(type, btn) {
+      // update button active state
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#news-grid .news-card');
+      const upcomingSection = document.querySelectorAll('[data-category="event"]');
+      const newsTitle = document.querySelector('[data-category="news"]');
+
+      if (type === 'all') {
+        cards.forEach(c => c.style.display = '');
+        upcomingSection.forEach(el => el.style.display = '');
+        newsTitle.style.display = '';
+      } else if (type === 'event') {
+        cards.forEach(c => {
+          c.style.display = c.dataset.type === 'event' ? '' : 'none';
+        });
+        upcomingSection.forEach(el => el.style.display = '');
+        newsTitle.style.display = '';
+      } else {
+        // hide event section
+        upcomingSection.forEach(el => el.style.display = 'none');
+        cards.forEach(c => {
+          c.style.display = c.dataset.type === type ? '' : 'none';
+        });
+        newsTitle.style.display = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

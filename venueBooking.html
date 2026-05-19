@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+
     <title>Venue Booking</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
+
 <body>
     
  <nav>
@@ -22,37 +29,104 @@
           <a href="#">Seasonal</a>
         </div>
       </div>
+      <a href="faqs.html">FAQs</a>
       <a href="allergies.html">Allergies</a>
       <a href="pastyVan.html">Pasty Van</a>
       <a href="venue.html" class="active">Weddings &amp; Venue</a>
       <a href="locations.html">Locations</a>
+      <a href="bakingnews.html">Baking News</a>
       <a href="aboutUs.html">About Us</a>
       <a href="reviews.html"> Reviews</a>
     </div>
   </nav>
 
-    </div>
+    <!-- BOOKING SECTION -->
+    <section class="booking-page">
 
-    <h1>Book a venue</h1>
-    <p>Fill in the form below and we will contact you soon!</p>
-    
-    <form action="email.php" method="post" id="booking" novalidate>
-        <div>
-            <input type="text" id="name" name="name" placeholder="Name">
+        <div class="booking-card">
+
+            <h1>🧁 Book a venue 🍩</h1>
+
+            <p>
+                Fill in the form below and we will contact you soon!
+            </p>
+
+            <form 
+                id="booking"
+                name="bookingForm"
+            >
+
+                <!-- NAME -->
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="customerName"
+                        placeholder="Name"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                    >
+
+                </div>
+
+
+                <!-- DATE -->
+                <div class="form-group">
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                    >
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div class="form-group">
+
+                    <textarea
+                        rows="6"
+                        id="details"
+                        name="details"
+                        placeholder="Details"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="submit-wrap">
+
+                    <input
+                        type="submit"
+                        value="Send"
+                        id="submit"
+                    >
+
+                </div>
+
+            </form>
+
         </div>
-        <div>
-            <input type="text" id="email" name="email" placeholder="Email">
-        </div>
-        <div>
-            <input type="date" id="date" name="date">
-        </div>
-        <div>
-            <input type="text" id="details" name="details" placeholder="Details">
-        </div>
-        <div>
-            <input type="submit" value="Send" id="submit">
-        </div>
-    </form>
-    
+
+    </section>
+
+
+<!-- EXTERNAL JS -->
+<script src="venueBooking.js"></script>
+
 </body>
 </html>
