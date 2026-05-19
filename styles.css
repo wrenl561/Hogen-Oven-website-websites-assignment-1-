@@ -1283,3 +1283,172 @@ p {
 
     background: #fff0f0 !important;
 }
+
+/*GLOBAL MOBILE FIXES*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MOBILE STYLES*/
+
+@media (max-width: 768px) {
+
+  /* NAVIGATION */
+
+  nav {
+    height: auto;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-logo img {
+    height: 70px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  /* HERO SECTION */
+
+  .centered {
+    width: 90%;
+    font-size: 1.8rem;
+    text-align: center;
+    top: 32%;
+  }
+
+  .centered2 {
+    width: 90%;
+    font-size: 1rem;
+    text-align: center;
+    top: 72%;
+  }
+
+  .pink-box {
+    width: 85%;
+    padding: 20px;
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  /* CARDS */
+
+  .cards {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  /* VENUE PAGE */
+
+  .venue-row {
+    flex-direction: column;
+  }
+
+  .venue-img,
+  .venue-text {
+    width: 100%;
+  }
+
+  .venue-img {
+    min-height: 220px;
+  }
+
+  /* EVENT CARDS */
+
+  .event-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-badge {
+    align-self: flex-start;
+  }
+
+  /* REVIEWS */
+
+  .review-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .review-top img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* CHECKOUT */
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .payment-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-form,
+  .order-summary,
+  .cart-section,
+  .booking-card {
+    padding: 25px 20px;
+  }
+
+  .booking-card h1 {
+    font-size: 2rem;
+  }
+
+  /* TABLES */
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  .allergen-table {
+    min-width: 700px;
+  }
+
+  /* GENERAL TEXT */
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+}
