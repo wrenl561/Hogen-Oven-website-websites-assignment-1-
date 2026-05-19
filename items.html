@@ -317,7 +317,45 @@
         </a>
     </aside>
 
+    <script>
+        let cart = [];
 
+        function addToCart(itemName, itemPrice) {
+
+            cart.push({
+                name: itemName,
+                price: itemPrice
+            });
+
+            updateCart();
+        }
+
+        function updateCart() {
+
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            cartItems.innerHTML = '';
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+
+                total += item.price;
+
+                const li = document.createElement('li');
+
+                li.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>£${item.price.toFixed(2)}</span>
+                `;
+
+                cartItems.appendChild(li);
+            });
+
+            cartTotal.textContent = `£${total.toFixed(2)}`;
+        }
+</script>
 
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
