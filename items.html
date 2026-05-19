@@ -265,53 +265,60 @@
      </section>
 
      <!-- SHOPPING CART -->
-     <aside class="cart-section">
+    <aside class="cart-section">
         <h2>Your Cart</h2>
+
         <ul id="cart-items"></ul>
-        <div id="cart-total">
+
+        <div class="cart-total-wrapper">
             <strong>Total:</strong>
-            <span>£</span id="cart-total">0.00</span></span>
+            <span id="cart-total">£0.00</span>
         </div>
+
         <a href="checkout.html" class="checkout-btn">
             Proceed to Checkout
         </a>
-     </aside>
+    </aside>
 
-     <script>
+    <script>
         let cart = [];
-        let total = 0;
-        
+
         function addToCart(itemName, itemPrice) {
+
             cart.push({
                 name: itemName,
                 price: itemPrice
             });
 
-            total += itemPrice;
             updateCart();
         }
-        
+
         function updateCart() {
+
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
-            
+
             cartItems.innerHTML = '';
-            
-            cart.forEach(item => {
-                
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+
+                total += item.price;
+
                 const li = document.createElement('li');
-                
+
                 li.innerHTML = `
-                   <span>${item.name}</span>
-                   <span>£${item.price.toFixed(2)}</span>
+                    <span>${item.name}</span>
+                    <span>£${item.price.toFixed(2)}</span>
                 `;
-                
+
                 cartItems.appendChild(li);
             });
 
-            cartTotal.textContent = total.toFixed(2);
+            cartTotal.textContent = `£${total.toFixed(2)}`;
         }
-     </script>
+</script>
 
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
