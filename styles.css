@@ -304,6 +304,12 @@ footer {
   border-radius: 12px;
 }
 
+.price {
+  margin: 10px 0;
+  font-weight: 700;
+  color: var(--pink);
+}
+
 /* ==== FAQ SECTION ==== */
 .faq {
   padding: 30px;
