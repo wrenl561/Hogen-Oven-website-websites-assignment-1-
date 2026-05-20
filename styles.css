@@ -73,7 +73,6 @@ nav {
 }
 
 .nav-links .dropdown { position: relative; }
-.nav-links .dropdown > a::after { content: ' ▾'; }
 
 .dropdown-menu {
   display: none;
