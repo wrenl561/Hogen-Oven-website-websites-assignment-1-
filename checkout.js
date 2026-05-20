@@ -84,7 +84,7 @@ function validateForm(event) {
 
 function init() {
     document
-        .getElementById('booking')
+        .getElementById('payment-form')
         .addEventListener('submit', validateForm);
 
 }
