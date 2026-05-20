@@ -25,40 +25,40 @@
         <div class="checkout-form">
             <h1>Checkout</h1>
 
-            <form id="payment-form">
+            <form id="payment-form" onsubmit="event.preventDefault()">
 
                 <h2>Customer Details</h2>
 
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" required>
+                <input type="text" id="fullname">
 
                 <label for="email">Email Address</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email">
 
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" required>
+                <input type="tel" id="phone">
 
                 <label for="address">Delivery Address</label>
-                <textarea id="address" rows="4" required></textarea>
+                <textarea id="address" rows="4"></textarea>
 
                 <h2>Payment Details</h2>
 
                 <label for="cardname">Cardholder Name</label>
-                <input type="text" id="cardname" required>
+                <input type="text" id="cardname">
 
                 <label for="cardnumber">Card Number</label>
-                <input type="text" id="cardnumber" maxlength="16" required>
+                <input type="text" id="cardnumber" maxlength="16">
 
                 <div class="payment-row">
 
                     <div>
                         <label for="expiry">Expiry Date</label>
-                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                        <input type="text" id="expiry" placeholder="MM/YY">
                     </div>
 
                     <div>
                         <label for="cvv">CVV</label>
-                        <input type="password" id="cvv" maxlength="3" required>
+                        <input type="password" id="cvv" maxlength="3">
                     </div>
 
                 </div>
@@ -99,5 +99,7 @@
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="checkout.js"></script>
 </body>
 </html>
