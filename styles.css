@@ -187,8 +187,8 @@ nav {
   text-align: center;
   color: white;
   font-size: 1.2rem;
-  width: 50%;           /* add this - controls the box width */
-  white-space: nowrap;  /* add this - stops text wrapping */
+  width: 50%;           
+  white-space: nowrap;  
   z-index: 10;
   padding: 40px 40px;
 }
@@ -306,7 +306,7 @@ footer {
 /* ==== FAQ SECTION ==== */
 .faq {
   padding: 30px;
-  background: var(--pink-light);
+  background: var(--pink-dark);
   border-radius: 16px;
 }
 
@@ -334,7 +334,7 @@ footer {
   background: var(--pink);
   padding: 15px;
   display: none;
-  color: var(--teal-light);
+  color: white;
 }
 
 /* ─── VENUE PAGE ─── */
