@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | Hogen Oven</title>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="nav-logo">
+    </a>
+
+    <div class="nav-links">
+
+      <div class="dropdown">
+        <a href="items.html">Menu</a>
+
+        <div class="dropdown-menu">
+          <a href="items.html">All Items</a>
+          <a href="pasties.html">Pasties</a>
+          <a href="cakes.html">Cakes &amp; Bakes</a>
+          <a href="seasonal.html">Seasonal</a>
+        </div>
+      </div>
+
+      <a href="faqs.html">FAQs</a>
+      <a href="allergies.html">Allergies</a>
+      <a href="pastyVan.html">Pasty Van</a>
+      <a href="venue.html">Weddings &amp; Venue</a>
+      <a href="locations.html">Locations</a>
+      <a href="bakingnews.html">Baking News</a>
+      <a href="aboutUs.html">About Us</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="carrers.html" class="active">Careers</a>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="page-hero apply-hero">
+    <h1>Apply to Join Us 🥐</h1>
+    <p>
+      Fill in the form below and we'll be in touch. We'd love to hear
+      what makes you a great fit for the Hogen Oven family.
+    </p>
+  </section>
+
+
+  <!-- APPLICATION FORM -->
+  <section class="apply-wrapper">
+
+    <div id="apply-form-container">
+
+      <form class="apply-form" id="applyForm" novalidate>
+
+        <p class="form-section-title">Your Details</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="e.g. Jenna" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="e.g. Trevithick" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 000000">
+          </div>
+        </div>
+
+        <hr class="form-divider">
+        <p class="form-section-title">Role &amp; Availability</p>
+
+        <div class="form-group">
+          <label for="role">Role You're Applying For</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select a role…</option>
+            <option value="bakery-assistant">Bakery Assistant – Truro (Part Time)</option>
+            <option value="barista">Café Barista – Falmouth (Weekend Role)</option>
+            <option value="van-driver">Pasty Van Driver – Cornwall Wide (Full Time)</option>
+            <option value="other">Other / General Enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Availability</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="availability" value="weekdays"> Weekdays
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="availability" value="weekends"> Weekends
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="availability" value="evenings"> Evenings
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="startDate">Earliest Start Date</label>
+          <input type="date" id="startDate" name="startDate">
+        </div>
+
+        <hr class="form-divider">
+        <p class="form-section-title">A Little About You</p>
+
+        <div class="form-group">
+          <label for="experience">Relevant Experience</label>
+          <textarea id="experience" name="experience" placeholder="Tell us about any previous bakery, café, or customer service experience…"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="whyUs">Why Do You Want to Work at Hogen Oven?</label>
+          <textarea id="whyUs" name="whyUs" placeholder="We love hearing what draws people to us…"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Application 🍩</button>
+
+      </form>
+
+    </div>
+
+    <!-- Success state -->
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">🎉</div>
+      <h2>Application Received!</h2>
+      <p>
+        Thanks for applying — we'll review your details and be in touch
+        very soon. In the meantime, feel free to browse our menu!
+      </p>
+      <br>
+      <a href="items.html" class="venue-cta" style="display:inline-block; margin-top:10px;">See Our Menu</a>
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Hogen Oven Bakery • Fresh bakes across Cornwall
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('applyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Basic validation
+      const required = this.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          field.style.borderColor = '#d9534f';
+          valid = false;
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      if (!valid) return;
+
+      // Show success message
+      document.getElementById('apply-form-container').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
