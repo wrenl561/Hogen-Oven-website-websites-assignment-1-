@@ -280,7 +280,7 @@ footer {
 
 .menu-categories button:hover {
   background: var(--teal);
-  color: white;
+  color: var(--pink);
 }
 
 .menu-items {
