@@ -274,7 +274,7 @@ footer {
     border-radius: 30px;
     font-weight: 700;
     font-family: var(--body);
-    color: white;
+    color: var(--pink);
     transition: 0.3s ease;
     }
 
