@@ -307,7 +307,7 @@ footer {
 /* ==== FAQ SECTION ==== */
 .faq {
   padding: 30px;
-  background: var(--pink);
+  background: var(--pink-dark);
   border-radius: 16px;
 }
 
