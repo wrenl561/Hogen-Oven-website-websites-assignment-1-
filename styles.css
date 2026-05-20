@@ -163,7 +163,7 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-   font-family: var(--body);
+   font-family: var(--candy);
     display: flex;
   justify-content: center;
   align-items: center;
