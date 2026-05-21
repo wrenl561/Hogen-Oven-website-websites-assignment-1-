@@ -72,27 +72,46 @@
         
         <!-- ORDER SUMMARY -->
         <aside class="order-summary">
+
             <h2>Order Summary</h2>
 
-            <ul id="summary-items">
-                <li>
-                    <span>Traditional Cornish Pasty</span>
-                    <span>£4.00</span>
-                </li>
-
-                <li>
-                    <span>Strawberry Cupcake</span>
-                    <span>£3.00</span>
-                </li>
-            </ul>
+            <ul id="summary-items"></ul>
 
             <div class="summary-total">
                 <strong>Total</strong>
-                <strong>£7.00</strong>
+                <strong id="summary-total">£0.00</strong>
             </div>
+            
         </aside>
 
     </section>
+
+    <script>
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const summaryItems = document.getElementById('summary-items');
+        const summaryTotal = document.getElementById('summary-total');
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            total += item.price;
+
+            const li = document.createElement('li');
+
+            li.innerHTML = `
+                <span>${item.name}</span>
+                <span>£${item.price.toFixed(2)}</span>
+            `;
+
+            summaryItems.appendChild(li);
+        });
+
+        summaryTotal.textContent = `£${total.toFixed(2)}`;
+
+    </script>
 
     <!-- FOOTER -->
     <footer>
