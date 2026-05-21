@@ -10,7 +10,6 @@
 <body>
     <!-- NAV -->
   <nav>
-    <nav>
     <a class="nav-logo" href="index.html">
       <img src="logo.png" alt="nav-logo">
     </a>
@@ -26,40 +25,40 @@
         <div class="checkout-form">
             <h1>Checkout</h1>
 
-            <form id="payment-form" onsubmit="event.preventDefault()">
+            <form id="payment-form">
 
                 <h2>Customer Details</h2>
 
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname">
+                <input type="text" id="fullname" required>
 
                 <label for="email">Email Address</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
 
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone">
+                <input type="tel" id="phone" required>
 
                 <label for="address">Delivery Address</label>
-                <textarea id="address" rows="4"></textarea>
+                <textarea id="address" rows="4" required></textarea>
 
                 <h2>Payment Details</h2>
 
                 <label for="cardname">Cardholder Name</label>
-                <input type="text" id="cardname">
+                <input type="text" id="cardname" required>
 
                 <label for="cardnumber">Card Number</label>
-                <input type="text" id="cardnumber" maxlength="16">
+                <input type="text" id="cardnumber" maxlength="16" required>
 
                 <div class="payment-row">
 
                     <div>
                         <label for="expiry">Expiry Date</label>
-                        <input type="text" id="expiry" placeholder="MM/YY">
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
                     </div>
 
                     <div>
                         <label for="cvv">CVV</label>
-                        <input type="password" id="cvv" maxlength="3">
+                        <input type="password" id="cvv" maxlength="3" required>
                     </div>
 
                 </div>
@@ -73,34 +72,51 @@
         
         <!-- ORDER SUMMARY -->
         <aside class="order-summary">
+
             <h2>Order Summary</h2>
 
-            <ul id="summary-items">
-                <li>
-                    <span>Traditional Cornish Pasty</span>
-                    <span>&pound;4.00</span>
-                </li>
-
-                <li>
-                    <span>Strawberry Cupcake</span>
-                    <span>£3.00</span>
-                </li>
-            </ul>
+            <ul id="summary-items"></ul>
 
             <div class="summary-total">
                 <strong>Total</strong>
-                <strong>£7.00</strong>
+                <strong id="summary-total">£0.00</strong>
             </div>
+            
         </aside>
 
     </section>
+
+    <script>
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const summaryItems = document.getElementById('summary-items');
+        const summaryTotal = document.getElementById('summary-total');
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            total += item.price;
+
+            const li = document.createElement('li');
+
+            li.innerHTML = `
+                <span>${item.name}</span>
+                <span>£${item.price.toFixed(2)}</span>
+            `;
+
+            summaryItems.appendChild(li);
+        });
+
+        summaryTotal.textContent = `£${total.toFixed(2)}`;
+
+    </script>
 
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="checkout.js"></script>
 </body>
 </html>

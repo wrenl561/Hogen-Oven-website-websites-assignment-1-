@@ -319,7 +319,8 @@
     </aside>
 
     <script>
-        let cart = [];
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         function addToCart(itemName, itemPrice) {
 
@@ -327,6 +328,8 @@
                 name: itemName,
                 price: itemPrice
             });
+
+            localStorage.setItem('cart', JSON.stringify(cart));
 
             updateCart();
         }
@@ -348,7 +351,7 @@
 
                 li.innerHTML = `
                     <span>${item.name}</span>
-                    <span>&pound;${item.price.toFixed(2)}</span>
+                    <span>£${item.price.toFixed(2)}</span>
                 `;
 
                 cartItems.appendChild(li);
@@ -356,7 +359,10 @@
 
             cartTotal.textContent = `&pound;${total.toFixed(2)}`;
         }
-</script>
+
+        updateCart();
+
+    </script>
 
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>
