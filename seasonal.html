@@ -40,144 +40,314 @@
   </nav>
 
     <!-- ==== SEASONAL SECTION ==== -->
-     <section class="menu">
-        <h2 class="text-on-pink">Our Seasonal Selection</h2>
+    <div class="shop-layout">
+        <section class="menu">
+            <h2 class="text-on-pink">Our Seasonal Selection</h2>
 
-        <br>
+            <br>
 
-        <div class="menu-items">
-            <div class="item menu-image seasonal">
-                <img src="Gingerbread-cookies.jpg" alt="Seasonal">
-                <h3>Gingerbread Cookie</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('Gingerbread Cookie', 4)">
-                    Add to Cart
-                </button>
+            <div class="menu-items">
+
+                <div class="item menu-image seasonal">
+                    <img src="Gingerbread-cookies.jpg" alt="Gingerbread Cookie">
+
+                    <h3>Gingerbread Cookie</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-gingerbread-cookie"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Gingerbread Cookie',
+                        4.00,
+                        'stock-gingerbread-cookie'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Christmas-cake.jpg" alt="Christmas Cake">
+
+                    <h3>Christmas Cake</h3>
+
+                    <p class="price">&pound;10.00</p>
+
+                    <p class="stock"
+                        id="stock-christmas-cake"
+                        data-stock="15">
+                        Available: 15
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Christmas Cake',
+                        10.00,
+                        'stock-christmas-cake'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Yule-log.jpg" alt="Yule Log">
+
+                    <h3>Yule Log</h3>
+
+                    <p class="price">&pound;2.00</p>
+
+                    <p class="stock"
+                        id="stock-yule-log"
+                        data-stock="25">
+                        Available: 25
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Yule Log',
+                        2.00,
+                        'stock-yule-log'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Wedding-cake.jpg" alt="Wedding Cake">
+
+                    <h3>Wedding Cake</h3>
+
+                    <p class="price">&pound;1.00</p>
+
+                    <p class="stock"
+                        id="stock-wedding-cake"
+                        data-stock="10">
+                        Available: 10
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Wedding Cake',
+                        1.00,
+                        'stock-wedding-cake'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Spiced-bun.jpg" alt="Spiced Bun">
+
+                    <h3>Spiced Bun</h3>
+
+                    <p class="price">&pound;3.00</p>
+
+                    <p class="stock"
+                        id="stock-spiced-bun"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Spiced Bun',
+                        3.00,
+                        'stock-spiced-bun'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Holiday-cheesecake.jpg" alt="Holiday Cheesecake">
+
+                    <h3>Holiday Cheesecake</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-holiday-cheesecake"
+                        data-stock="15">
+                        Available: 15
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Holiday Cheesecake',
+                        4.00,
+                        'stock-holiday-cheesecake'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Festival_Sugar_cookie.webp" alt="Festival Sugar Cookie">
+
+                    <h3>Festival Sugar Cookie</h3>
+
+                    <p class="price">&pound;3.00</p>
+
+                    <p class="stock"
+                        id="stock-festival-sugar-cookie"
+                        data-stock="25">
+                        Available: 25
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Festival Sugar Cookie',
+                        3.00,
+                        'stock-festival-sugar-cookie'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="Caramel_Swirl_brownie.webp" alt="Caramel Swirl Brownie">
+
+                    <h3>Caramel Swirl Brownie</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-caramel-swirl-brownie"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Caramel Swirl Brownie',
+                        4.00,
+                        'stock-caramel-swirl-brownie'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="creamandstrawberrypasty.PNG" alt="Strawberry & Cream Pastry">
+
+                    <h3>Strawberry & Cream Pastry</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-strawberry-cream-pastry"
+                        data-stock="15">
+                        Available: 15
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Strawberry & Cream Pastry',
+                        4.00,
+                        'stock-strawberry-cream-pastry'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image seasonal">
+                    <img src="lemondrizzle.PNG" alt="Elderflower & Lemon Drizzle Loaf">
+
+                    <h3>Elderflower & Lemon Drizzle Loaf</h3>
+
+                    <p class="price">&pound;3.50</p>
+
+                    <p class="stock"
+                        id="stock-elderflower-lemon-drizzle-loaf"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Elderflower & Lemon Drizzle Loaf',
+                        3.50,
+                        'stock-elderflower-lemon-drizzle-loaf'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
             </div>
+        </section>
+        <aside class="cart-section">
 
-            <div class="item menu-image seasonal">
-                <img src="Christmas-cake.jpg" alt="Seasonal">
-                <h3>Christmas Cake</h3>
-                <p class="price">&pound;10.00</p>
-                <button onclick="addToCart('Christmas Cake', 10)">
-                    Add to Cart
-                </button>
-            </div>
+                <h2>Your Cart</h2>
 
-            <div class="item menu-image seasonal">
-                <img src="Yule-log.jpg" alt="Seasonal">
-                <h3>Yule Log</h3>
-                <p class="price">&pound;2.00</p>
-                <button onclick="addToCart('Yule Log', 2)">
-                    Add to Cart
-                </button>
-            </div>
+                <ul id="cart-items"></ul>
 
-            <div class="item menu-image seasonal">
-                <img src="Wedding-cake.jpg" alt="Seasonal">
-                <h3>Wedding Cake</h3>
-                <p class="price">&pound;1.00</p>
-                <button onclick="addToCart('Wedding Cake', 1)">
-                    Add to Cart
-                </button>
-            </div>
+                <div class="cart-total-wrapper">
 
-            <div class="item menu-image seasonal">
-                <img src="Spiced-bun.jpg" alt="Seasonal">
-                <h3>Spiced Bun</h3>
-                <p class="price">&pound;3.00</p>
-                <button onclick="addToCart('Spiced Bun', 3)">
-                    Add to Cart
-                </button>
-            </div>
+                    <strong>Total:</strong>
 
-            <div class="item menu-image seasonal">
-                <img src="Holiday-cheesecake.jpg" alt="Seasonal">
-                <h3>Holiday Cheesecake</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('Holiday Cheesecake', 4)">
-                    Add to Cart
-                </button>
-            </div>
+                    <span id="cart-total">&pound;0.00</span>
 
-            <div class="item menu-image seasonal">
-                <img src="Festival_Sugar_cookie.webp" alt="Seasonal">
-                <h3>Festival Sugar Cookie</h3>
-                <p class="price">&pound;3.00</p>
-                <button onclick="addToCart('Festival Sugar Cookie', 3)">
-                    Add to Cart
-                </button>
-            </div>
+                </div>
 
-            <div class="item menu-image seasonal">
-                <img src="Caramel_Swirl_brownie.webp" alt="Seasonal">
-                <h3>Caramel Swirl Brownie</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('Caramel Swirl Brownie', 4)">
-                    Add to Cart
-                </button>
-            </div>
+                <a href="checkout.html" class="checkout-btn">
+                    Proceed to Checkout
+                </a>
 
-            <div class="item menu-image seasonal">
-                <img src="lemondrizzle.PNG" alt="Seasonal">
-                <h3>Elderflower & Lemon Drizzle Loaf</h3>
-                <p class="price">&pound;3.50</p>
-                <button onclick="addToCart('Elderflower & Lemon Drizzle Loaf', 3.50)">
-                    Add to Cart
-                </button>
-            </div>
-
-        </div>
-     </section>
-
-     <!-- SHOPPING CART -->
-     <aside class="cart-section">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <div id="cart-total">
-            <strong>Total:</strong>
-            <span>£</span id="cart-total">0.00</span></span>
-        </div>
-        <a href="checkout.html" class="checkout-btn">
-            Proceed to Checkout
-        </a>
-     </aside>
+        </aside>
+    </div>
 
      <script>
-        let cart = [];
-        let total = 0;
-        
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
         function addToCart(itemName, itemPrice) {
+
             cart.push({
                 name: itemName,
                 price: itemPrice
             });
 
-            total += itemPrice;
+            localStorage.setItem('cart', JSON.stringify(cart));
+
             updateCart();
         }
-        
+
         function updateCart() {
+
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
-            
+
             cartItems.innerHTML = '';
-            
-            cart.forEach(item => {
-                
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+
+                total += item.price;
+
                 const li = document.createElement('li');
-                
+
                 li.innerHTML = `
-                   <span>${item.name}</span>
-                   <span>£${item.price.toFixed(2)}</span>
+                    <span>${item.name}</span>
+                    <span>£${item.price.toFixed(2)}</span>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">
+                        Remove
+                    </button>
                 `;
-                
+
                 cartItems.appendChild(li);
             });
 
-            cartTotal.textContent = total.toFixed(2);
+            cartTotal.textContent = `£${total.toFixed(2)}`;
         }
-     </script>
+
+        function removeFromCart(index) {
+
+            cart.splice(index, 1);
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            updateCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCart);
+
+    </script>
 
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>

@@ -40,153 +40,294 @@
   </nav>
 
     <!-- ==== CAKES SECTION ==== -->
-     <section class="menu">
-        <h2 class="text-on-pink">Our Cakes & Bakes Selection</h2>
+    <div class="shop-layout">
+        <section class="menu">
+            <h2 class="text-on-pink">Our Baked Goods Selection</h2>
 
-        <br>
+            <br>
 
-        <div class="menu-items">
-            <div class="item menu-image baked goods">
-                <img src="white-loaf.jpg" alt="Baked Goods">
-                <h3>White Loaf</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('White Loaf', 4)">
-                    Add to Cart
-                </button>
+            <div class="menu-items">
+
+                <div class="item menu-image baked-goods">
+                    <img src="white-loaf.jpg" alt="White Loaf">
+
+                    <h3>White Loaf</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-white-loaf"
+                        data-stock="10">
+                        Available: 10
+                    </p>
+
+                    <button onclick="addToCart('White Loaf', 4.00, 'stock-white-loaf')">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="French-baguette.jpg" alt="French Baguette">
+
+                    <h3>French Baguette</h3>
+
+                    <p class="price">&pound;2.50</p>
+
+                    <p class="stock"
+                        id="stock-french-baguette"
+                        data-stock="15">
+                        Available: 15
+                    </p>
+
+                    <button onclick="addToCart('French Baguette', 2.50, 'stock-french-baguette')">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Plain-croissant.jpg" alt="Plain Croissant">
+
+                    <h3>Plain Croissant</h3>
+
+                    <p class="price">&pound;2.00</p>
+
+                    <p class="stock"
+                        id="stock-plain-croissant"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart('Plain Croissant', 2.00, 'stock-plain-croissant')">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Cinnamon-rolls.jpg" alt="Cinnamon Roll">
+
+                    <h3>Cinnamon Roll</h3>
+
+                    <p class="price">&pound;1.00</p>
+
+                    <p class="stock"
+                        id="stock-cinnamon-roll"
+                        data-stock="25">
+                        Available: 25
+                    </p>
+
+                    <button onclick="addToCart('Cinnamon Roll', 1.00, 'stock-cinnamon-roll')">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Strawberry_cupcakes.webp" alt="Strawberry Cupcake">
+
+                    <h3>Strawberry Cupcake</h3>
+
+                    <p class="price">&pound;3.00</p>
+
+                    <p class="stock"
+                        id="stock-strawberry-cupcake"
+                        data-stock="20">
+                        Available: 20
+                    </p>
+
+                    <button onclick="addToCart('Strawberry Cupcake', 3.00, 'stock-strawberry-cupcake')">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Butter_croissant.webp" alt="Butter Croissant">
+
+                    <h3>Butter Croissant</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-butter-croissant"
+                        data-stock="15">
+                        Available: 15
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Butter Croissant',
+                        4.00,
+                        'stock-butter-croissant'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Rainbow_Sprinkle_donut.webp" alt="Rainbow Sprinkle Donut">
+
+                    <h3>Rainbow Sprinkle Donut</h3>
+
+                    <p class="price">&pound;3.00</p>
+
+                    <p class="stock"
+                        id="stock-rainbow-sprinkle-donut"
+                        data-stock="25">
+                        Available: 25
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Rainbow Sprinkle Donut',
+                        3.00,
+                        'stock-rainbow-sprinkle-donut'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="Sourdough-loaf.jpg" alt="Sourdough Loaf">
+
+                    <h3>Sourdough Loaf</h3>
+
+                    <p class="price">&pound;4.00</p>
+
+                    <p class="stock"
+                        id="stock-sourdough-loaf"
+                        data-stock="10">
+                        Available: 10
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Sourdough Loaf',
+                        4.00,
+                        'stock-sourdough-loaf'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="chocolatecookie.PNG" alt="Triple Chocolate Chunk Cookie">
+
+                    <h3>Triple Chocolate Chunk Cookie</h3>
+
+                    <p class="price">&pound;2.50</p>
+
+                    <p class="stock"
+                        id="stock-triple-chocolate-cookie"
+                        data-stock="30">
+                        Available: 30
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Triple Chocolate Chunk Cookie',
+                        2.50,
+                        'stock-triple-chocolate-cookie'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="item menu-image baked-goods">
+                    <img src="MaplePecan.PNG" alt="Maple Pecan Tart">
+
+                    <h3>Maple Pecan Tart</h3>
+
+                    <p class="price">&pound;3.50</p>
+
+                    <p class="stock"
+                        id="stock-maple-pecan-tart"
+                        data-stock="25">
+                        Available: 25
+                    </p>
+
+                    <button onclick="addToCart(
+                        'Maple Pecan Tart',
+                        3.50,
+                        'stock-maple-pecan-tart'
+                    )">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <aside class="cart-section">
+
+            <h2>Your Cart</h2>
+
+            <ul id="cart-items"></ul>
+
+            <div class="cart-total-wrapper">
+
+                <strong>Total:</strong>
+
+                <span id="cart-total">£0.00</span>
+
             </div>
 
-            <div class="item menu-image baked goods">
-                <img src="French-baguette.jpg" alt="Baked Goods">
-                <h3>French Baguette</h3>
-                <p class="price">&pound;2.50</p>
-                <button onclick="addToCart('French Baguette', 2.50)">
-                    Add to Cart
-                </button>
-            </div>
+            <a href="checkout.html" class="checkout-btn">
+                Proceed to Checkout
+            </a>
 
-            <div class="item menu-image baked goods">
-                <img src="Plain-croissant.jpg" alt="Baked Goods">
-                <h3>Plain Croissant</h3>
-                <p class="price">&pound;2.00</p>
-                <button onclick="addToCart('Plain Croissant', 2)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="Cinnamon-rolls.jpg" alt="Baked Goods">
-                <h3>Cinnamon Roll</h3>
-                <p class="price">&pound;1.00</p>
-                <button onclick="addToCart('Cinnamon Roll', 1)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="Strawberry_cupcakes.webp" alt="Baked Goods">
-                <h3>Strawberry Cupcake</h3>
-                <p class="price">&pound;3.00</p>
-                <button onclick="addToCart('Strawberry Cupcake', 3)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="Butter_croissant.webp" alt="Baked Goods">
-                <h3>Butter Croissant</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('Butter Croissant', 4)">
-                    Add to Cart
-                </button>
-                <p class="price">&pound;4.00</p>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="Rainbow_Sprinkle_donut.webp" alt="Baked Goods">
-                <h3>Rainbow Sprinkle Donut</h3>
-                <p class="price">&pound;3.00</p>
-                <button onclick="addToCart('Rainbow Sprinkle Donut', 3)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="Sourdough-loaf.jpg" alt="Baked Goods">
-                <h3>Sourdough Loaf</h3>
-                <p class="price">&pound;4.00</p>
-                <button onclick="addToCart('Sourdough Loaf', 4)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="chocolatecookie.PNG" alt="Baked Goods">
-                <h3>Triple Chocolate Chunk Cookie</h3>
-                <p class="price">&pound;2.50</p>
-                <button onclick="addToCart('Triple Chocolate Chunk Cookie', 2.50)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="item menu-image baked goods">
-                <img src="MaplePecan.PNG" alt="Baked Goods">
-                <h3>Maple Pecan Tart</h3>
-                <p class="price">&pound;3.50</p>
-                <button onclick="addToCart('Maple Pecan Tart', 3.50)">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-     </section>
-
-    <!-- SHOPPING CART -->
-     <aside class="cart-section">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <div id="cart-total">
-            <strong>Total:</strong>
-            <span>£</span id="cart-total">0.00</span></span>
-        </div>
-        <a href="checkout.html" class="checkout-btn">
-            Proceed to Checkout
-        </a>
-     </aside>
+        </aside>
+     </div> 
 
      <script>
-        let cart = [];
-        let total = 0;
-        
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
         function addToCart(itemName, itemPrice) {
+
             cart.push({
                 name: itemName,
                 price: itemPrice
             });
 
-            total += itemPrice;
+            localStorage.setItem('cart', JSON.stringify(cart));
+
             updateCart();
         }
-        
+
         function updateCart() {
+
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
-            
+
             cartItems.innerHTML = '';
-            
-            cart.forEach(item => {
-                
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+
+                total += item.price;
+
                 const li = document.createElement('li');
-                
+
                 li.innerHTML = `
-                   <span>${item.name}</span>
-                   <span>£${item.price.toFixed(2)}</span>
+                    <span>${item.name}</span>
+                    <span>£${item.price.toFixed(2)}</span>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">
+                        Remove
+                    </button>
                 `;
-                
+
                 cartItems.appendChild(li);
             });
 
-            cartTotal.textContent = total.toFixed(2);
+            cartTotal.textContent = `£${total.toFixed(2)}`;
         }
-     </script>
+
+        function removeFromCart(index) {
+
+            cart.splice(index, 1);
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            updateCart();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCart);
+
+    </script>
 
     <footer>
         <p>&copy; 2026 Hogen Oven. All rights reserved.</p>

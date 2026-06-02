@@ -35,6 +35,10 @@
       <a href="bakingnews.html">Baking News</a>
       <a href="aboutUs.html">About Us</a>
       <a href="reviews.html"> Reviews</a>
+<<<<<<< Updated upstream
+=======
+      <a href="carrers.html"> Careers</a>
+>>>>>>> Stashed changes
 
     </div>
   </nav>
@@ -107,30 +111,35 @@
     </section>
 
     <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function updateSummary() {
 
-        const summaryItems = document.getElementById('summary-items');
-        const summaryTotal = document.getElementById('summary-total');
+            const summaryItems = document.getElementById('summary-items');
+            const summaryTotal = document.getElementById('summary-total');
 
-        let total = 0;
+            summaryItems.innerHTML = '';
 
-        cart.forEach(item => {
+            let total = 0;
 
-            total += item.price;
+            cart.forEach(item => {
 
-            const li = document.createElement('li');
+                total += item.price;
 
-            li.innerHTML = `
-                <span>${item.name}</span>
-                <span>£${item.price.toFixed(2)}</span>
-            `;
+                const li = document.createElement('li');
 
-            summaryItems.appendChild(li);
-        });
+                li.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>£${item.price.toFixed(2)}</span>
+                `;
 
-        summaryTotal.textContent = `£${total.toFixed(2)}`;
+                summaryItems.appendChild(li);
+            });
 
+            summaryTotal.textContent = `£${total.toFixed(2)}`;
+        }
+
+        updateSummary();
     </script>
 
     <!-- FOOTER -->
