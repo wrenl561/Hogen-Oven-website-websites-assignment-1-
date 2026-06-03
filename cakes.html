@@ -275,7 +275,26 @@
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        function addToCart(itemName, itemPrice) {
+        function addToCart(itemName, itemPrice, stockId) {
+
+            const stockElement = document.getElementById(stockId);
+
+            let currentStock = parseInt(
+                stockElement.dataset.stock || stockElement.textContent.replace(/\D/g, '')
+            );
+
+            if (currentStock <= 0) {
+
+                stockElement.textContent = 'Out of Stock';
+
+                return;
+            }
+
+            currentStock--;
+
+            stockElement.dataset.stock = currentStock;
+
+            stockElement.textContent = `Available: ${currentStock}`;
 
             cart.push({
                 name: itemName,
